@@ -1,0 +1,14 @@
+# Include some rc files
+!.eslintrc.js
+
+# Ignore npm
+/node_modules
+
+# Ignore JetBrains files
+.idea/
+
+# Ignore next.js files
+.next/
+
+# Ignore build artifacts
+/out

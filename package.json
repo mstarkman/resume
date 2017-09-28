@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "next",
     "build": "next build && next export",
+    "dev": "next",
+    "lint": "npm run lint:js",
+    "lint:js": "eslint --color './**/*.js?(x)'",
     "start": "next start"
   },
   "keywords": [],
@@ -15,5 +17,14 @@
     "next": "^3.2.2",
     "react": "^15.6.2",
     "react-dom": "^15.6.2"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.0.1",
+    "eslint": "^4.7.2",
+    "eslint-config-airbnb": "^15.1.0",
+    "eslint-config-airbnb-base": "^12.0.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.4.0"
   }
 }
