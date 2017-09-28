@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "next build && next export",
+    "deploy": "npm run build && ./deploy.sh",
     "dev": "next",
     "lint": "npm run lint:js",
     "lint:js": "eslint --color './**/*.js?(x)'",
