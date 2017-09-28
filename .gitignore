@@ -1,0 +1,11 @@
+# Ignore JetBrains files
+.idea/
+
+# Ignore next.js files
+.next/
+
+# Ignore DS_store file
+/**/*.DS_store
+
+# Ignore npm
+/node_modules
