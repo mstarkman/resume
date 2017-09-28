@@ -9,3 +9,6 @@
 
 # Ignore npm
 /node_modules
+
+# Ignore build artifacts
+/out
