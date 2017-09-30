@@ -1,5 +1,6 @@
 /* eslint-disable react/self-closing-comp */
 import NextHead from 'next/head'
+import './global.css'
 
 const Head = () => (
   <NextHead>
@@ -22,12 +23,17 @@ const Head = () => (
     <link rel="shortcut icon" href="/static/img/favicon.png" />
 
     <title>Mark Starkman&#39;s Resume</title>
+
+    {/* Load fonts and Bulma */}
+    <link href="https://fonts.googleapis.com/css?family=Asap:400,400i,600,600i" rel="stylesheet" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.min.css"
       integrity="sha256-spCEAaZMKebC3rE/ZTt8jITn65b0Zan45WXblWjyDyQ="
       crossOrigin="anonymous"
     />
+
+    {/* Let's have some fun with FontAwesome */}
     <script src="https://use.fontawesome.com/640f2595b4.js"></script>
   </NextHead>
 )
