@@ -5,7 +5,7 @@ import Section from '../components/section'
 const Index = () => (
   <div>
     <Head />
-      <Navbar />
+    <Navbar />
     <Section>
       Welcome to next.js!
     </Section>
