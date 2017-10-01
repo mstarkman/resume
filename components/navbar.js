@@ -16,6 +16,7 @@ const StyledNavbarItem = styled.div.attrs({ className: 'navbar-item' })`
 
 const StyleName = StyledNavbarItem.extend`
   font-weight: 600;
+  font-size: 1.25rem;
 `
 
 const linkStyling = `
