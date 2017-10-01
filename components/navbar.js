@@ -89,6 +89,21 @@ const Navbar = () => (
             iconName="github"
             text="GitHub"
           />
+          <StyledNavbarDropdownIconLink
+            href="https://www.linkedin.com/in/mstarkman/"
+            iconName="linkedin-square"
+            text="Linked In"
+          />
+          <StyledNavbarDropdownIconLink
+            href="/static/downloads/Mark%20Starkman%20Resume%202017.pdf"
+            iconName="file-pdf-o"
+            text="PDF Format"
+          />
+          <StyledNavbarDropdownIconLink
+            href="/static/downloads/Mark%20Starkman%20Resume%202017.docx"
+            iconName="file-word-o"
+            text="Microsoft Word Format"
+          />
         </div>
       </StyledNavbarItemHasDropdown>
     </div>
