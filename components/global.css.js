@@ -1,4 +1,5 @@
 import { injectGlobal } from 'styled-components'
+import { baseFontColor } from './styles/colors'
 
 // eslint-disable-next-line no-unused-expressions
 injectGlobal`
@@ -7,6 +8,7 @@ injectGlobal`
   input, 
   select, 
   textarea {
-    font-family: 'Asap', sans-serif;;
+    font-family: 'Asap', sans-serif;
+    color: ${baseFontColor};
   }
 `
