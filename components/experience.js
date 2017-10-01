@@ -179,7 +179,7 @@ const experiences = [
       'Maintained and enhanced NETSIM network simulator that was used to simulate and analyze various networking protocols.',
       'Used Microsoft Visual C++ to simulate a satellite based network.',
     ],
-  }
+  },
 ]
 
 const Experience = () => (
