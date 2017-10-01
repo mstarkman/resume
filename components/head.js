@@ -26,6 +26,7 @@ const Head = () => (
 
     {/* Load fonts and Bulma */}
     <link href="https://fonts.googleapis.com/css?family=Asap:400,400i,600,600i" rel="stylesheet" />
+    <link href="/static/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.min.css"
