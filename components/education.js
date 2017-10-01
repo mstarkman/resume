@@ -1,8 +1,9 @@
 import Details from './details'
+import ResumeSectionHeader from './resume_section_header'
 
 const Education = () => (
   <div className="content">
-    <h3>Education</h3>
+    <ResumeSectionHeader text="Education" />
     <Details
       dates="Graduated May 1996"
       location="Pittsburgh, PA"

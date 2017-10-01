@@ -1,6 +1,8 @@
+import ResumeSectionHeader from './resume_section_header'
+
 const Summary = () => (
   <div className="content">
-    <h3>Summary</h3>
+    <ResumeSectionHeader text="Summary" />
     <p>
       I’m a senior engineer with over 20 years of experience as a developer, a database administrator
       and a manager. As a developer, I have been working with various web technologies including Ruby

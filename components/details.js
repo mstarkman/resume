@@ -1,6 +1,10 @@
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
+const Container = styled.div`
+  margin-bottom: 40px;
+`
+
 const Row = styled.div`
   display: flex;
 `
@@ -22,8 +26,22 @@ const Place = styled.div`
   font-style: italic;
 `
 
+const renderBullets = (bullets) => {
+  if (!bullets.length) { return null }
+
+  return (
+    <ul>
+      {bullets.map(bullet => (
+        <li>
+          {bullet}
+        </li>
+      ))}
+    </ul>
+  )
+}
+
 const Details = ({ bullets, dates, location, place, title }) => (
-  <div>
+  <Container>
     <Row>
       <Left>
         <Title>
@@ -48,7 +66,10 @@ const Details = ({ bullets, dates, location, place, title }) => (
         </div>
       </Right>
     </Row>
-  </div>
+    <Row>
+      {renderBullets(bullets)}
+    </Row>
+  </Container>
 )
 
 Details.propTypes = {
