@@ -1,3 +1,4 @@
+import { Component } from 'react'
 import styled from 'styled-components'
 import { backgroundHover, backgroundPurple, baseFontColor, inverseFontColor } from './styles/colors'
 import IconLink from './icon_link'
@@ -21,6 +22,10 @@ const StyleName = StyledNavbarItem.extend`
 
 const linkStyling = `
   color: ${inverseFontColor};
+
+  @media (max-width: 1007px) {
+    color: ${baseFontColor};
+  }
 
   &:hover {
     background-color: ${backgroundHover} !important;
@@ -64,54 +69,90 @@ const StyledNavbarDropdownIconLink = styled(IconLink).attrs({ className: 'navbar
   }
 `
 
-const Navbar = () => (
-  <StyledNavbar aria-label="main navigation">
-    <div className="navbar-brand">
-      <StyleName>
-        Mark Starkman
-      </StyleName>
-    </div>
-    <div className="navbar-end">
-      <StyledNavbarIconLink
-        href="mailto:me@markstarkman.com?subject=Let's%20chat%20about%20your%20resume!"
-        iconName="envelope-o"
-        text="me@markstarkman.com"
-      />
-      <StyledNavbarIconLink
-        href="tel:2672180239"
-        iconName="phone"
-        text="267-218-0239"
-      />
-      <StyledNavbarItemHasDropdown>
-        <StyledNavbarDropdownTrigger href="#">
-          more
-        </StyledNavbarDropdownTrigger>
+const HamburgerButton = styled.button`
+  background-color: ${backgroundPurple};
+  border: none;
+`
 
-        <div className="navbar-dropdown is-right">
-          <StyledNavbarDropdownIconLink
-            href="https://github.com/mstarkman"
-            iconName="github"
-            text="GitHub"
-          />
-          <StyledNavbarDropdownIconLink
-            href="https://www.linkedin.com/in/mstarkman/"
-            iconName="linkedin-square"
-            text="Linked In"
-          />
-          <StyledNavbarDropdownIconLink
-            href="/static/downloads/Mark%20Starkman%20Resume%202017.pdf"
-            iconName="file-pdf-o"
-            text="PDF Format"
-          />
-          <StyledNavbarDropdownIconLink
-            href="/static/downloads/Mark%20Starkman%20Resume%202017.docx"
-            iconName="file-word-o"
-            text="Microsoft Word Format"
-          />
+const LettuceTomatoBurger = styled.span`
+  background-color: ${inverseFontColor} !important;
+  outline: none;
+  
+  &:hover {
+      background-color: ${inverseFontColor} !important;
+  }
+`
+
+class Navbar extends Component {
+  state = {
+    isMobileNavShown: false,
+  }
+
+  onHamburgerClick = () => {
+    this.setState({
+      isMobileNavShown: !this.state.isMobileNavShown,
+    })
+  }
+
+  hamburgerClassName = () => `button navbar-burger ${this.state.isMobileNavShown ? 'is-active' : ''}`
+  navbarMenuClassName = () => `navbar-end navbar-menu ${this.state.isMobileNavShown ? 'is-active' : ''}`
+
+  render() {
+    return (
+      <StyledNavbar aria-label="main navigation">
+        <div className="navbar-brand">
+          <StyleName>
+            Mark Starkman
+          </StyleName>
+          <HamburgerButton onClick={this.onHamburgerClick} className={this.hamburgerClassName()}>
+            <LettuceTomatoBurger />
+            <LettuceTomatoBurger />
+            <LettuceTomatoBurger />
+          </HamburgerButton>
         </div>
-      </StyledNavbarItemHasDropdown>
-    </div>
-  </StyledNavbar>
-)
+        <div className={this.navbarMenuClassName()}>
+          <StyledNavbarIconLink
+            href="mailto:me@markstarkman.com?subject=Let's%20chat%20about%20your%20resume!"
+            iconName="envelope-o"
+            text="me@markstarkman.com"
+          />
+          <StyledNavbarIconLink
+            href="tel:2672180239"
+            iconName="phone"
+            text="267-218-0239"
+          />
+          <StyledNavbarItemHasDropdown>
+            <StyledNavbarDropdownTrigger href="#">
+              more
+            </StyledNavbarDropdownTrigger>
+
+            <div className="navbar-dropdown is-right">
+              <StyledNavbarDropdownIconLink
+                href="https://github.com/mstarkman"
+                iconName="github"
+                text="GitHub"
+              />
+              <StyledNavbarDropdownIconLink
+                href="https://www.linkedin.com/in/mstarkman/"
+                iconName="linkedin-square"
+                text="Linked In"
+              />
+              <StyledNavbarDropdownIconLink
+                href="/static/downloads/Mark%20Starkman%20Resume%202017.pdf"
+                iconName="file-pdf-o"
+                text="PDF Format"
+              />
+              <StyledNavbarDropdownIconLink
+                href="/static/downloads/Mark%20Starkman%20Resume%202017.docx"
+                iconName="file-word-o"
+                text="Microsoft Word Format"
+              />
+            </div>
+          </StyledNavbarItemHasDropdown>
+        </div>
+      </StyledNavbar>
+    )
+  }
+}
 
 export default Navbar
