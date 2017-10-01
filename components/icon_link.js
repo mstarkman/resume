@@ -1,10 +1,15 @@
 import PropTypes from 'prop-types'
+import styled from 'styled-components'
 import Icon from './icon'
+
+const StyledText = styled.span`
+  margin-left: 5px;
+`
 
 const IconLink = ({ className, href, iconName, text }) => (
   <a className={className} href={href}>
     <Icon iconName={iconName} />
-    <span>{text}</span>
+    <StyledText>{text}</StyledText>
   </a>
 )
 
