@@ -1,3 +1,4 @@
+/* eslint-disable react/no-array-index-key */
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
@@ -31,8 +32,8 @@ const renderBullets = (bullets) => {
 
   return (
     <ul>
-      {bullets.map(bullet => (
-        <li>
+      {bullets.map((bullet, index) => (
+        <li key={index}>
           {bullet}
         </li>
       ))}

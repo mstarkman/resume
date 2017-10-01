@@ -1,4 +1,4 @@
-/* eslint-disable max-len */
+/* eslint-disable max-len, react/no-array-index-key */
 import Details from './details'
 import ResumeSectionHeader from './resume_section_header'
 
@@ -185,7 +185,7 @@ const experiences = [
 const Experience = () => (
   <div className="content">
     <ResumeSectionHeader text="Experience" />
-    {experiences.map(experience => <Details {...experience} />)}
+    {experiences.map((experience, index) => <Details key={index} {...experience} />)}
   </div>
 )
 
