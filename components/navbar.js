@@ -3,8 +3,11 @@ import { backgroundHover, backgroundPurple, baseFontColor, inverseFontColor } fr
 import IconLink from './icon_link'
 
 const StyledNavbar = styled.nav.attrs({ className: 'navbar' })`
+  position: fixed;
+  width: 100%;
   background-color: ${backgroundPurple};
   color: ${inverseFontColor};
+  z-index: 20;
 `
 
 const StyledNavbarItem = styled.div.attrs({ className: 'navbar-item' })`

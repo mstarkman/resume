@@ -1,14 +1,14 @@
 import Head from '../components/head'
 import Navbar from '../components/navbar'
-import Section from '../components/section'
+import ResumeBody from '../components/resume_body'
+import Ribbon from '../components/ribbon'
 
 const Index = () => (
   <div>
     <Head />
     <Navbar />
-    <Section>
-      Welcome to next.js!
-    </Section>
+    <Ribbon />
+    <ResumeBody />
   </div>
 )
 
