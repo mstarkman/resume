@@ -2,6 +2,7 @@ import { Component } from 'react'
 import styled from 'styled-components'
 import { backgroundHover, backgroundPurple, baseFontColor, inverseFontColor } from './styles/colors'
 import IconLink from './icon_link'
+import * as media from './styles/media'
 
 const StyledNavbar = styled.nav.attrs({ className: 'navbar' })`
   position: fixed;
@@ -23,9 +24,9 @@ const StyleName = StyledNavbarItem.extend`
 const linkStyling = `
   color: ${inverseFontColor};
 
-  @media (max-width: 1007px) {
-    color: ${baseFontColor};
-  }
+  ${media.touchOnly`
+    color: red;
+  `}
 
   &:hover {
     background-color: ${backgroundHover} !important;
@@ -33,13 +34,23 @@ const linkStyling = `
   }
 `
 
-const StyledNavbarIconLink = styled(IconLink).attrs({ className: 'navbar-item' })([linkStyling])
+const StyledNavbarIconLink = styled(IconLink).attrs({ className: 'navbar-item' })`
+  ${linkStyling}
+  
+  ${media.touchOnly`
+    color: ${baseFontColor};
+  `}
+`
 
 const StyledNavbarItemHasDropdown = styled.div.attrs({ className: 'navbar-item has-dropdown is-hoverable' })([])
 
 const StyledNavbarDropdownTrigger = styled.a.attrs({ className: 'navbar-link' })`
   ${linkStyling}
   
+  ${media.touchOnly`
+    color: ${baseFontColor};
+  `}
+
   ${StyledNavbarItemHasDropdown}:hover & {
     background-color: ${backgroundHover} !important;
     color: ${baseFontColor} !important;

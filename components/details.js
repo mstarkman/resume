@@ -1,6 +1,7 @@
 /* eslint-disable react/no-array-index-key */
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
+import * as media from './styles/media'
 
 const Container = styled.div`
   margin-bottom: 40px;
@@ -8,15 +9,23 @@ const Container = styled.div`
 
 const Row = styled.div`
   display: flex;
+  flex-flow: row wrap;
 `
 
 const Left = styled.div`
   align-self: flex-start;
+
+  ${media.touchOnly`
+    flex: 1 1 100%;
+  `}
 `
 
 const Right = styled.div`
-  align-self: flex-end;
-  margin-left: auto;
+  ${media.nonTouch`
+    align-self: flex-end;
+    margin-left: auto;
+    line-height: 1.75rem;
+  `}
 `
 
 const Title = styled.div`
