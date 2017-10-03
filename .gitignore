@@ -12,3 +12,6 @@
 
 # Ignore build artifacts
 /out
+
+# Ignore MS Word working files
+/**/~*.docx
