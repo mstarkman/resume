@@ -146,7 +146,7 @@ class Navbar extends Component {
               <StyledNavbarDropdownIconLink
                 href="https://www.linkedin.com/in/mstarkman/"
                 iconName="linkedin-square"
-                text="Linked In"
+                text="LinkedIn"
               />
               <StyledNavbarDropdownIconLink
                 href="/static/downloads/Mark%20Starkman%20Resume%202017.pdf"
