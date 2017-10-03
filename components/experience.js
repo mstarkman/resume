@@ -9,9 +9,10 @@ const experiences = [
     place: 'Homepolish, Inc.',
     location: 'New York, NY (remote)',
     bullets: [
+      'Lead the front-end team to build a new front-end infrastructure that will be used for all of our client facing tools.  We built the application as a JavaScript React application that communicated with the GraphQL API back-end using Apollo Client tools and Redux.',
       'Worked on the product engineering team to enhance and maintain our client-facing and internal processing Ruby on Rails, JavaScript and PostgreSQL application to introduce new functionality in a maintainable and performant manner to meet the changing needs of the business.',
-      'Integrated a variety of 3rd party tools to allow for event tracking (Segment and Mixpanel) and to externalize our email processing (Iterable) to reduce the work load on the product engineering team so we could deliver proprietary business functionality in a more timely manner.',
-      'Provided mentorship and guidance for the lesser experienced team members through a variety of means including code-reviews, pair programming and upfront design discussions.',
+      'Integrated a variety of 3rd party tools to allow for event tracking (Segment and Mixpanel) and to externalize our email processing (Iterable) to reduce the work load on the product engineering team so we could deliver proprietary business functionality in a timelier manner.',
+      'Provided mentorship and guidance for the lesser experienced team members through a variety of means including code-reviews, pair programming and upfront design discussions.  This included onboarding several engineers for the newly formed front-end team.',
     ],
   },
   {
