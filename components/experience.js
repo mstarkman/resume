@@ -29,7 +29,7 @@ const experiences = [
   },
   {
     title: 'Senior Staff Scientist',
-    dates: 'September 2015 – May 2015',
+    dates: 'September 2014 – May 2015',
     place: 'SaneBox',
     location: 'Remote',
     bullets: [
