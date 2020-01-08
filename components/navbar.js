@@ -36,7 +36,7 @@ const linkStyling = `
 
 const StyledNavbarIconLink = styled(IconLink).attrs({ className: 'navbar-item' })`
   ${linkStyling}
-  
+
   ${media.touchOnly`
     color: ${baseFontColor};
   `}
@@ -46,7 +46,7 @@ const StyledNavbarItemHasDropdown = styled.div.attrs({ className: 'navbar-item h
 
 const StyledNavbarDropdownTrigger = styled.a.attrs({ className: 'navbar-link' })`
   ${linkStyling}
-  
+
   ${media.touchOnly`
     color: ${baseFontColor};
   `}
@@ -56,16 +56,16 @@ const StyledNavbarDropdownTrigger = styled.a.attrs({ className: 'navbar-link' })
     color: ${baseFontColor} !important;
 
     &::after {
-      border-color: ${baseFontColor};    
+      border-color: ${baseFontColor};
     }
   }
-  
+
   &:hover {
     &::after {
-      border-color: ${baseFontColor};    
+      border-color: ${baseFontColor};
     }
   }
-  
+
   &::after {
     border-color: ${inverseFontColor};
   }
@@ -88,7 +88,7 @@ const HamburgerButton = styled.button`
 const LettuceTomatoBurger = styled.span`
   background-color: ${inverseFontColor} !important;
   outline: none;
-  
+
   &:hover {
       background-color: ${inverseFontColor} !important;
   }
@@ -149,12 +149,12 @@ class Navbar extends Component {
                 text="LinkedIn"
               />
               <StyledNavbarDropdownIconLink
-                href="/static/downloads/Mark%20Starkman%20Resume%202017.pdf"
+                href="/static/downloads/Mark%20Starkman%20Resume%202020.pdf"
                 iconName="file-pdf-o"
                 text="PDF Format"
               />
               <StyledNavbarDropdownIconLink
-                href="/static/downloads/Mark%20Starkman%20Resume%202017.docx"
+                href="/static/downloads/Mark%20Starkman%20Resume%202020.docx"
                 iconName="file-word-o"
                 text="Microsoft Word Format"
               />

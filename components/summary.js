@@ -9,7 +9,7 @@ const Summary = () => (
     </p>
 
     <p>
-      I have been writing various kinds of software for almost 30 years. I have always had a passion for writing clear, concise and maintainable software. While I have an electrical engineering degree, I have spent all of my professional career involved with the process of writing, maintaining and shipping software to meet the needs of the business. I have worked in a remote environment for the past 6 years and I look forward to continuing my career in the full-time or mostly full-time remote environment.
+      I have been writing various kinds of software for almost 30 years. I have always had a passion for writing clear, concise and maintainable software. While I have an electrical engineering degree, I have spent all of my professional career involved with the process of writing, maintaining and shipping software to meet the needs of the business. I have worked in a remote environment for the past 8 years and I look forward to continuing my career in the full-time or mostly full-time remote environment.
     </p>
   </div>
 )

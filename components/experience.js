@@ -4,8 +4,19 @@ import ResumeSectionHeader from './resume_section_header'
 
 const experiences = [
   {
+    title: 'Senior Staff Scientist',
+    dates: 'October 2017 - Present',
+    place: 'SaneBox',
+    location: 'Remote',
+    bullets: [
+      'Worked directly with our in-house UI/UX designer and other front-end developers to maintain, extend and develop our customer facing web application which is written in Ruby on Rails, JavaScript, React and Angular.js.',
+      'Implemented new features for our customers including our Do Not Disturb feature that allowed customers to hide all of their email for a period of time and then have it sent back to their inbox.  This required changes to all layers of our stack including the mail processing daemons, Ruby on Rails API and the UI Angular/React code.',
+      'Provided on-call support to our customers to ensure that their accounts were connecting and processing the email from their email server to minimize any downtime and to make sure that our customers remained happy.',
+    ],
+  },
+  {
     title: 'Engineering Tech Lead',
-    dates: 'August 2016 - Present',
+    dates: 'August 2016 - October 2017',
     place: 'Homepolish, Inc.',
     location: 'New York, NY (remote)',
     bullets: [
